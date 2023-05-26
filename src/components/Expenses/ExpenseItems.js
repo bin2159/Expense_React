@@ -15,7 +15,7 @@ const ExpenseItems = (props) => {
       <ExpenseDate date={props.date} />
       <ExpenseDetails
         title={props.title}
-        amount={amount}
+        amount={props.amount}
         location={props.location}
       />
       <button onClick={clickHandler}>Delete</button>

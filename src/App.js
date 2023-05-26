@@ -1,10 +1,13 @@
 import Cards from "./components/UI/Cards";
-import ExpenseItems from "./components/Expenses/ExpenseItems";
+import Expense from "./components/Expenses/Expense";
 import NewExpense from "./components/NewExpense/NewExpense";
 const App = () => {
   const addExpenseHandler=(enpensedata)=>{
     console.log(enpensedata)
   }
+ 
+ 
+
   const expense = [
     {
       id: "e1",
@@ -40,14 +43,7 @@ const App = () => {
     <Cards className="App">
       <h2>Lets get started</h2>
       <NewExpense onAddExpense={addExpenseHandler}/>
-      {expense.map((expense) => (
-        <ExpenseItems
-          title={expense.title}
-          amount={expense.amount}
-          location={expense.location}
-          date={expense.date}
-        />
-      ))}
+      <Expense items={expense}/>
     </Cards>
   );
 };
