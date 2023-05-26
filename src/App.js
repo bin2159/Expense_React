@@ -1,6 +1,6 @@
 import Cards from "./components/UI/Cards";
 import ExpenseItems from "./components/Expenses/ExpenseItems";
-const App=()=> {
+const App = () => {
   const expense = [
     {
       id: "e1",
@@ -31,36 +31,20 @@ const App=()=> {
       date: new Date(2021, 5, 12),
     },
   ];
+
   return (
     <Cards className="App">
       <h2>Lets get started</h2>
-      
-      <ExpenseItems
-        title={expense[0].title}
-        amount={expense[0].amount}
-        location={expense[0].location}
-        date={expense[0].date}
-      />
-      <ExpenseItems
-        title={expense[1].title}
-        amount={expense[1].amount}
-        location={expense[1].location}
-        date={expense[1].date}
-      />
-      <ExpenseItems
-        title={expense[2].title}
-        amount={expense[2].amount}
-        location={expense[2].location}
-        date={expense[2].date}
-      />
-      <ExpenseItems
-        title={expense[3].title}
-        amount={expense[3].amount}
-        location={expense[3].location}
-        date={expense[3].date}
-      />
+      {expense.map((expense) => (
+        <ExpenseItems
+          title={expense.title}
+          amount={expense.amount}
+          location={expense.location}
+          date={expense.date}
+        />
+      ))}
     </Cards>
   );
-}
+};
 
 export default App;
