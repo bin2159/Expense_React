@@ -11,8 +11,6 @@
   
   .new-expense button {
     margin-top:1rem;
-    height: 4rem;
-    width: 50rem;
     font: inherit;
     cursor: pointer;
     padding: 1rem 2rem;
