@@ -1,15 +1,17 @@
-
-
-const ExpenseItems = () => {
+import "./ExpenseItems.css";
+import ExpenseDate from "./ExpenseDate";
+import ExpenseDetails from "./ExpenseDetails";
+const ExpenseItems = (props) => {
   return (
-    <div>
-        <div>Date</div>
-        <div>
-            <h2>Title</h2>
-            <div>Amount</div>
-        </div>
+    <div className="expense-item">
+      <ExpenseDate date={props.date} />
+      <ExpenseDetails
+        title={props.title}
+        amount={props.amount}
+        location={props.location}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default ExpenseItems
+export default ExpenseItems;
