@@ -21,7 +21,7 @@ const ExpenseForm = (props) => {
     e.preventDefault();
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: enteredDate,
       location: enteredLocation,
     };
@@ -70,6 +70,7 @@ const ExpenseForm = (props) => {
             onChange={locationChangeHandler}
           />
         </div>
+        <button type="button" onClick={props.onCancel}>Cancel</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
