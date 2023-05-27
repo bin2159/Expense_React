@@ -10,6 +10,7 @@ const ExpenseItems = (props) => {
     setAmount(amount+100)
 
   }
+  
   return (
     <Cards className="expense-item">
       <ExpenseDate date={props.date} />
